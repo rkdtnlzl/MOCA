@@ -36,8 +36,8 @@ struct DateView: View {
                     }
                     .frame(height: 90)
                 } else {
-                    Spacer() // 빈 칸의 높이를 줄이기 위해 Color.clear 대신 Spacer 사용
-                        .frame(height: 0) // 높이를 최소화
+                    Spacer()
+                        .frame(height: 0)
                 }
             }
         }
