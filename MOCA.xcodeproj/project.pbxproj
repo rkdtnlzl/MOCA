@@ -21,6 +21,7 @@
 		018A14932C9806EA0075FDB5 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14922C9806EA0075FDB5 /* DateView.swift */; };
 		018A14962C980E0B0075FDB5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14952C980E0B0075FDB5 /* MapView.swift */; };
 		018A14992C98152A0075FDB5 /* PostMocaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14982C98152A0075FDB5 /* PostMocaView.swift */; };
+		018A149C2C981EED0075FDB5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A149B2C981EED0075FDB5 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		018A14952C980E0B0075FDB5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		018A14982C98152A0075FDB5 /* PostMocaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMocaView.swift; sourceTree = "<group>"; };
 		018A149A2C981C5D0075FDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		018A149B2C981EED0075FDB5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				018A14982C98152A0075FDB5 /* PostMocaView.swift */,
+				018A149B2C981EED0075FDB5 /* ImagePicker.swift */,
 			);
 			path = PostMoca;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				018A14962C980E0B0075FDB5 /* MapView.swift in Sources */,
 				018A14932C9806EA0075FDB5 /* DateView.swift in Sources */,
 				018A14912C9806B70075FDB5 /* HeaderView.swift in Sources */,
+				018A149C2C981EED0075FDB5 /* ImagePicker.swift in Sources */,
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
 				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
 				010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */,
