@@ -15,6 +15,11 @@
 		010A0A0E2C97F40E00B4AF6C /* MOCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A0A0D2C97F40E00B4AF6C /* MOCAUITests.swift */; };
 		010A0A102C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */; };
 		0137D2452C97F51800D2BCF4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0137D2442C97F51800D2BCF4 /* .gitignore */; };
+		018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14882C97F7D20075FDB5 /* CalendarView.swift */; };
+		018A148D2C97FC690075FDB5 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A148C2C97FC690075FDB5 /* Color+.swift */; };
+		018A14912C9806B70075FDB5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14902C9806B70075FDB5 /* HeaderView.swift */; };
+		018A14932C9806EA0075FDB5 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14922C9806EA0075FDB5 /* DateView.swift */; };
+		018A14962C980E0B0075FDB5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14952C980E0B0075FDB5 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		010A0A0D2C97F40E00B4AF6C /* MOCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAUITests.swift; sourceTree = "<group>"; };
 		010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0137D2442C97F51800D2BCF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		018A14882C97F7D20075FDB5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		018A148C2C97FC690075FDB5 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		018A14902C9806B70075FDB5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		018A14922C9806EA0075FDB5 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		018A14952C980E0B0075FDB5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,9 @@
 			children = (
 				010A09F22C97F40C00B4AF6C /* MOCAApp.swift */,
 				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
+				018A148B2C97FC5C0075FDB5 /* Extension */,
+				018A148A2C97F9B00075FDB5 /* Calendar */,
+				018A14942C980E000075FDB5 /* Map */,
 				010A09F62C97F40E00B4AF6C /* Assets.xcassets */,
 				010A09F82C97F40E00B4AF6C /* Preview Content */,
 			);
@@ -128,6 +141,32 @@
 				010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */,
 			);
 			path = MOCAUITests;
+			sourceTree = "<group>";
+		};
+		018A148A2C97F9B00075FDB5 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				018A14882C97F7D20075FDB5 /* CalendarView.swift */,
+				018A14902C9806B70075FDB5 /* HeaderView.swift */,
+				018A14922C9806EA0075FDB5 /* DateView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		018A148B2C97FC5C0075FDB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				018A148C2C97FC690075FDB5 /* Color+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		018A14942C980E000075FDB5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				018A14952C980E0B0075FDB5 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018A14962C980E0B0075FDB5 /* MapView.swift in Sources */,
+				018A14932C9806EA0075FDB5 /* DateView.swift in Sources */,
+				018A14912C9806B70075FDB5 /* HeaderView.swift in Sources */,
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
+				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
 				010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */,
+				018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
