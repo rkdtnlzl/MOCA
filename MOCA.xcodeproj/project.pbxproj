@@ -11,9 +11,6 @@
 		010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F42C97F40C00B4AF6C /* ContentView.swift */; };
 		010A09F72C97F40E00B4AF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010A09F62C97F40E00B4AF6C /* Assets.xcassets */; };
 		010A09FA2C97F40E00B4AF6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010A09F92C97F40E00B4AF6C /* Preview Assets.xcassets */; };
-		010A0A042C97F40E00B4AF6C /* MOCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A0A032C97F40E00B4AF6C /* MOCATests.swift */; };
-		010A0A0E2C97F40E00B4AF6C /* MOCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A0A0D2C97F40E00B4AF6C /* MOCAUITests.swift */; };
-		010A0A102C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */; };
 		0137D2452C97F51800D2BCF4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0137D2442C97F51800D2BCF4 /* .gitignore */; };
 		018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14882C97F7D20075FDB5 /* CalendarView.swift */; };
 		018A148D2C97FC690075FDB5 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A148C2C97FC690075FDB5 /* Color+.swift */; };
@@ -23,53 +20,21 @@
 		018A14992C98152A0075FDB5 /* PostMocaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14982C98152A0075FDB5 /* PostMocaView.swift */; };
 		018A149C2C981EED0075FDB5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A149B2C981EED0075FDB5 /* ImagePicker.swift */; };
 		018A14A82C9ACA390075FDB5 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A149F2C9ACA390075FDB5 /* Pretendard-SemiBold.otf */; };
-		018A14A92C9ACA390075FDB5 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A149F2C9ACA390075FDB5 /* Pretendard-SemiBold.otf */; };
-		018A14AA2C9ACA390075FDB5 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A149F2C9ACA390075FDB5 /* Pretendard-SemiBold.otf */; };
 		018A14AB2C9ACA390075FDB5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A02C9ACA390075FDB5 /* Pretendard-Regular.otf */; };
-		018A14AC2C9ACA390075FDB5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A02C9ACA390075FDB5 /* Pretendard-Regular.otf */; };
-		018A14AD2C9ACA390075FDB5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A02C9ACA390075FDB5 /* Pretendard-Regular.otf */; };
 		018A14AE2C9ACA390075FDB5 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A12C9ACA390075FDB5 /* Pretendard-Thin.otf */; };
-		018A14AF2C9ACA390075FDB5 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A12C9ACA390075FDB5 /* Pretendard-Thin.otf */; };
-		018A14B02C9ACA390075FDB5 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A12C9ACA390075FDB5 /* Pretendard-Thin.otf */; };
 		018A14B12C9ACA390075FDB5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A22C9ACA390075FDB5 /* Pretendard-Bold.otf */; };
-		018A14B22C9ACA390075FDB5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A22C9ACA390075FDB5 /* Pretendard-Bold.otf */; };
-		018A14B32C9ACA390075FDB5 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A22C9ACA390075FDB5 /* Pretendard-Bold.otf */; };
 		018A14B42C9ACA390075FDB5 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A32C9ACA390075FDB5 /* Pretendard-ExtraBold.otf */; };
-		018A14B52C9ACA390075FDB5 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A32C9ACA390075FDB5 /* Pretendard-ExtraBold.otf */; };
-		018A14B62C9ACA390075FDB5 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A32C9ACA390075FDB5 /* Pretendard-ExtraBold.otf */; };
 		018A14B72C9ACA390075FDB5 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A42C9ACA390075FDB5 /* Pretendard-Light.otf */; };
-		018A14B82C9ACA390075FDB5 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A42C9ACA390075FDB5 /* Pretendard-Light.otf */; };
-		018A14B92C9ACA390075FDB5 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A42C9ACA390075FDB5 /* Pretendard-Light.otf */; };
 		018A14BA2C9ACA390075FDB5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A52C9ACA390075FDB5 /* Pretendard-Medium.otf */; };
-		018A14BB2C9ACA390075FDB5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A52C9ACA390075FDB5 /* Pretendard-Medium.otf */; };
-		018A14BC2C9ACA390075FDB5 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A52C9ACA390075FDB5 /* Pretendard-Medium.otf */; };
 		018A14BD2C9ACA390075FDB5 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A62C9ACA390075FDB5 /* Pretendard-ExtraLight.otf */; };
-		018A14BE2C9ACA390075FDB5 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A62C9ACA390075FDB5 /* Pretendard-ExtraLight.otf */; };
-		018A14BF2C9ACA390075FDB5 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A62C9ACA390075FDB5 /* Pretendard-ExtraLight.otf */; };
 		018A14C02C9ACA390075FDB5 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A72C9ACA390075FDB5 /* Pretendard-Black.otf */; };
-		018A14C12C9ACA390075FDB5 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A72C9ACA390075FDB5 /* Pretendard-Black.otf */; };
-		018A14C22C9ACA390075FDB5 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 018A14A72C9ACA390075FDB5 /* Pretendard-Black.otf */; };
 		018A14C42C9ACAD80075FDB5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14C32C9ACAD80075FDB5 /* Font+.swift */; };
-		018A14C52C9ACAD80075FDB5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14C32C9ACAD80075FDB5 /* Font+.swift */; };
-		018A14C62C9ACAD80075FDB5 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14C32C9ACAD80075FDB5 /* Font+.swift */; };
+		018A14C82C9AE13A0075FDB5 /* FindCafeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14C72C9AE13A0075FDB5 /* FindCafeView.swift */; };
+		018A14CC2C9AE2DC0075FDB5 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */; };
+		018A14D12C9AE3130075FDB5 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14D02C9AE3130075FDB5 /* Cafe.swift */; };
+		018A14DA2C9AF5580075FDB5 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14D92C9AF5580075FDB5 /* Todo.swift */; };
+		018A14DF2C9AF62E0075FDB5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 018A14DE2C9AF62E0075FDB5 /* RealmSwift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		010A0A002C97F40E00B4AF6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 010A09E72C97F40C00B4AF6C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 010A09EE2C97F40C00B4AF6C;
-			remoteInfo = MOCA;
-		};
-		010A0A0A2C97F40E00B4AF6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 010A09E72C97F40C00B4AF6C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 010A09EE2C97F40C00B4AF6C;
-			remoteInfo = MOCA;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		010A09EF2C97F40C00B4AF6C /* MOCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,11 +42,6 @@
 		010A09F42C97F40C00B4AF6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		010A09F62C97F40E00B4AF6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010A09F92C97F40E00B4AF6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		010A09FF2C97F40E00B4AF6C /* MOCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		010A0A032C97F40E00B4AF6C /* MOCATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCATests.swift; sourceTree = "<group>"; };
-		010A0A092C97F40E00B4AF6C /* MOCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		010A0A0D2C97F40E00B4AF6C /* MOCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAUITests.swift; sourceTree = "<group>"; };
-		010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0137D2442C97F51800D2BCF4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		018A14882C97F7D20075FDB5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		018A148C2C97FC690075FDB5 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
@@ -101,6 +61,10 @@
 		018A14A62C9ACA390075FDB5 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		018A14A72C9ACA390075FDB5 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		018A14C32C9ACAD80075FDB5 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		018A14C72C9AE13A0075FDB5 /* FindCafeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCafeView.swift; sourceTree = "<group>"; };
+		018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		018A14D02C9AE3130075FDB5 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		018A14D92C9AF5580075FDB5 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,20 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		010A09FC2C97F40E00B4AF6C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		010A0A062C97F40E00B4AF6C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				018A14DF2C9AF62E0075FDB5 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +84,6 @@
 			children = (
 				0137D2442C97F51800D2BCF4 /* .gitignore */,
 				010A09F12C97F40C00B4AF6C /* MOCA */,
-				010A0A022C97F40E00B4AF6C /* MOCATests */,
-				010A0A0C2C97F40E00B4AF6C /* MOCAUITests */,
 				010A09F02C97F40C00B4AF6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				010A09EF2C97F40C00B4AF6C /* MOCA.app */,
-				010A09FF2C97F40E00B4AF6C /* MOCATests.xctest */,
-				010A0A092C97F40E00B4AF6C /* MOCAUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,8 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				018A149A2C981C5D0075FDB5 /* Info.plist */,
+				018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */,
 				010A09F22C97F40C00B4AF6C /* MOCAApp.swift */,
 				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
+				018A14CF2C9AE3090075FDB5 /* Model */,
 				018A149D2C9AC9BC0075FDB5 /* Resource */,
 				018A148B2C97FC5C0075FDB5 /* Extension */,
 				018A148A2C97F9B00075FDB5 /* Calendar */,
@@ -172,23 +121,6 @@
 				010A09F92C97F40E00B4AF6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		010A0A022C97F40E00B4AF6C /* MOCATests */ = {
-			isa = PBXGroup;
-			children = (
-				010A0A032C97F40E00B4AF6C /* MOCATests.swift */,
-			);
-			path = MOCATests;
-			sourceTree = "<group>";
-		};
-		010A0A0C2C97F40E00B4AF6C /* MOCAUITests */ = {
-			isa = PBXGroup;
-			children = (
-				010A0A0D2C97F40E00B4AF6C /* MOCAUITests.swift */,
-				010A0A0F2C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift */,
-			);
-			path = MOCAUITests;
 			sourceTree = "<group>";
 		};
 		018A148A2C97F9B00075FDB5 /* Calendar */ = {
@@ -223,6 +155,7 @@
 			children = (
 				018A14982C98152A0075FDB5 /* PostMocaView.swift */,
 				018A149B2C981EED0075FDB5 /* ImagePicker.swift */,
+				018A14C72C9AE13A0075FDB5 /* FindCafeView.swift */,
 			);
 			path = PostMoca;
 			sourceTree = "<group>";
@@ -251,6 +184,15 @@
 			path = Pretendard;
 			sourceTree = "<group>";
 		};
+		018A14CF2C9AE3090075FDB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				018A14D02C9AE3130075FDB5 /* Cafe.swift */,
+				018A14D92C9AF5580075FDB5 /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,45 +209,12 @@
 			dependencies = (
 			);
 			name = MOCA;
+			packageProductDependencies = (
+				018A14DE2C9AF62E0075FDB5 /* RealmSwift */,
+			);
 			productName = MOCA;
 			productReference = 010A09EF2C97F40C00B4AF6C /* MOCA.app */;
 			productType = "com.apple.product-type.application";
-		};
-		010A09FE2C97F40E00B4AF6C /* MOCATests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 010A0A162C97F40E00B4AF6C /* Build configuration list for PBXNativeTarget "MOCATests" */;
-			buildPhases = (
-				010A09FB2C97F40E00B4AF6C /* Sources */,
-				010A09FC2C97F40E00B4AF6C /* Frameworks */,
-				010A09FD2C97F40E00B4AF6C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				010A0A012C97F40E00B4AF6C /* PBXTargetDependency */,
-			);
-			name = MOCATests;
-			productName = MOCATests;
-			productReference = 010A09FF2C97F40E00B4AF6C /* MOCATests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		010A0A082C97F40E00B4AF6C /* MOCAUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 010A0A192C97F40E00B4AF6C /* Build configuration list for PBXNativeTarget "MOCAUITests" */;
-			buildPhases = (
-				010A0A052C97F40E00B4AF6C /* Sources */,
-				010A0A062C97F40E00B4AF6C /* Frameworks */,
-				010A0A072C97F40E00B4AF6C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				010A0A0B2C97F40E00B4AF6C /* PBXTargetDependency */,
-			);
-			name = MOCAUITests;
-			productName = MOCAUITests;
-			productReference = 010A0A092C97F40E00B4AF6C /* MOCAUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -320,14 +229,6 @@
 					010A09EE2C97F40C00B4AF6C = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					010A09FE2C97F40E00B4AF6C = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 010A09EE2C97F40C00B4AF6C;
-					};
-					010A0A082C97F40E00B4AF6C = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 010A09EE2C97F40C00B4AF6C;
-					};
 				};
 			};
 			buildConfigurationList = 010A09EA2C97F40C00B4AF6C /* Build configuration list for PBXProject "MOCA" */;
@@ -339,13 +240,14 @@
 				Base,
 			);
 			mainGroup = 010A09E62C97F40C00B4AF6C;
+			packageReferences = (
+				018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 010A09F02C97F40C00B4AF6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				010A09EE2C97F40C00B4AF6C /* MOCA */,
-				010A09FE2C97F40E00B4AF6C /* MOCATests */,
-				010A0A082C97F40E00B4AF6C /* MOCAUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,38 +272,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		010A09FD2C97F40E00B4AF6C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018A14BB2C9ACA390075FDB5 /* Pretendard-Medium.otf in Resources */,
-				018A14AF2C9ACA390075FDB5 /* Pretendard-Thin.otf in Resources */,
-				018A14BE2C9ACA390075FDB5 /* Pretendard-ExtraLight.otf in Resources */,
-				018A14B22C9ACA390075FDB5 /* Pretendard-Bold.otf in Resources */,
-				018A14C12C9ACA390075FDB5 /* Pretendard-Black.otf in Resources */,
-				018A14B52C9ACA390075FDB5 /* Pretendard-ExtraBold.otf in Resources */,
-				018A14A92C9ACA390075FDB5 /* Pretendard-SemiBold.otf in Resources */,
-				018A14AC2C9ACA390075FDB5 /* Pretendard-Regular.otf in Resources */,
-				018A14B82C9ACA390075FDB5 /* Pretendard-Light.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		010A0A072C97F40E00B4AF6C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018A14BC2C9ACA390075FDB5 /* Pretendard-Medium.otf in Resources */,
-				018A14B02C9ACA390075FDB5 /* Pretendard-Thin.otf in Resources */,
-				018A14BF2C9ACA390075FDB5 /* Pretendard-ExtraLight.otf in Resources */,
-				018A14B32C9ACA390075FDB5 /* Pretendard-Bold.otf in Resources */,
-				018A14C22C9ACA390075FDB5 /* Pretendard-Black.otf in Resources */,
-				018A14B62C9ACA390075FDB5 /* Pretendard-ExtraBold.otf in Resources */,
-				018A14AA2C9ACA390075FDB5 /* Pretendard-SemiBold.otf in Resources */,
-				018A14AD2C9ACA390075FDB5 /* Pretendard-Regular.otf in Resources */,
-				018A14B92C9ACA390075FDB5 /* Pretendard-Light.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -416,45 +286,17 @@
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
 				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
 				018A14C42C9ACAD80075FDB5 /* Font+.swift in Sources */,
+				018A14DA2C9AF5580075FDB5 /* Todo.swift in Sources */,
 				010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */,
 				018A14992C98152A0075FDB5 /* PostMocaView.swift in Sources */,
 				018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		010A09FB2C97F40E00B4AF6C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018A14C52C9ACAD80075FDB5 /* Font+.swift in Sources */,
-				010A0A042C97F40E00B4AF6C /* MOCATests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		010A0A052C97F40E00B4AF6C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018A14C62C9ACAD80075FDB5 /* Font+.swift in Sources */,
-				010A0A102C97F40E00B4AF6C /* MOCAUITestsLaunchTests.swift in Sources */,
-				010A0A0E2C97F40E00B4AF6C /* MOCAUITests.swift in Sources */,
+				018A14CC2C9AE2DC0075FDB5 /* APIKey.swift in Sources */,
+				018A14C82C9AE13A0075FDB5 /* FindCafeView.swift in Sources */,
+				018A14D12C9AE3130075FDB5 /* Cafe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		010A0A012C97F40E00B4AF6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 010A09EE2C97F40C00B4AF6C /* MOCA */;
-			targetProxy = 010A0A002C97F40E00B4AF6C /* PBXContainerItemProxy */;
-		};
-		010A0A0B2C97F40E00B4AF6C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 010A09EE2C97F40C00B4AF6C /* MOCA */;
-			targetProxy = 010A0A0A2C97F40E00B4AF6C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		010A0A112C97F40E00B4AF6C /* Debug */ = {
@@ -648,82 +490,6 @@
 			};
 			name = Release;
 		};
-		010A0A172C97F40E00B4AF6C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7S6PH8TVFD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MOCATests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MOCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MOCA";
-			};
-			name = Debug;
-		};
-		010A0A182C97F40E00B4AF6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7S6PH8TVFD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MOCATests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MOCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MOCA";
-			};
-			name = Release;
-		};
-		010A0A1A2C97F40E00B4AF6C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7S6PH8TVFD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MOCAUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MOCA;
-			};
-			name = Debug;
-		};
-		010A0A1B2C97F40E00B4AF6C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7S6PH8TVFD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seokho.MOCAUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MOCA;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -745,25 +511,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		010A0A162C97F40E00B4AF6C /* Build configuration list for PBXNativeTarget "MOCATests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				010A0A172C97F40E00B4AF6C /* Debug */,
-				010A0A182C97F40E00B4AF6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		010A0A192C97F40E00B4AF6C /* Build configuration list for PBXNativeTarget "MOCAUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				010A0A1A2C97F40E00B4AF6C /* Debug */,
-				010A0A1B2C97F40E00B4AF6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		018A14DE2C9AF62E0075FDB5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 010A09E72C97F40C00B4AF6C /* Project object */;
 }
