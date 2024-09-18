@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+    
     var body: some View {
-        ZStack {
-            Color(hex: 0xFAF4F2).ignoresSafeArea()
-            TabView {
-                CalendarView()
-                    .tabItem {
-                        Image(systemName: "calendar")
-                    }
-                MapView()
-                    .tabItem {
-                        Image(systemName: "map")
-                    }
-            }
+        TabView {
+            CalendarView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                }
+            MapView()
+                .tabItem {
+                    Image(systemName: "map")
+                }
         }
+        
     }
 }
 

@@ -13,36 +13,39 @@ struct CalendarView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
-                HeaderView(selectedDate: $selectedDate)
-                
-                HStack {
-                    ForEach(Calendar.current.shortWeekdaySymbols, id: \.self) { symbol in
-                        Text(symbol)
-                            .frame(maxWidth: .infinity)
+            ZStack {
+                Color(hex: 0xFAF4F2).ignoresSafeArea()
+                VStack(spacing: 0) {
+                    HeaderView(selectedDate: $selectedDate)
+                    
+                    HStack {
+                        ForEach(Calendar.current.shortWeekdaySymbols, id: \.self) { symbol in
+                            Text(symbol)
+                                .frame(maxWidth: .infinity)
+                        }
                     }
-                }
-                .frame(height: 30)
-                
-                DateView(selectedDate: selectedDate)
-                
-                Spacer()
-                
-                HStack {
+                    .frame(height: 30)
+                    
+                    DateView(selectedDate: selectedDate)
+                    
                     Spacer()
-                    NavigationLink(destination: PostMocaView()) {
-                        Image(systemName: "plus")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color(hex: 0xFFAA8F))
-                            .clipShape(Circle())
-                            .shadow(radius: 2)
+                    
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: PostMocaView()) {
+                            Image(systemName: "plus")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color(hex: 0xFFAA8F))
+                                .clipShape(Circle())
+                                .shadow(radius: 2)
+                        }
+                        .padding(.bottom)
+                        .padding(.trailing)
                     }
-                    .padding(.bottom)
-                    .padding(.trailing)
                 }
+                .padding()
             }
-            .padding()
         }
     }
 }
