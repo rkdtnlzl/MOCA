@@ -27,14 +27,15 @@ struct DateView: View {
                         if isSpecialDate(date: date) {
                             Image("coffeeIcon")
                                 .resizable()
-                                .frame(width: 40, height: 50)
+                                .frame(width: 30, height: 40)
                         } else {
-                            Spacer().frame(height: 50)
+                            Spacer()
+                                .frame(height: 40)
                         }
                         
                         Spacer()
                     }
-                    .frame(height: 90)
+                    .frame(height: 80)
                 } else {
                     Spacer()
                         .frame(height: 0)
