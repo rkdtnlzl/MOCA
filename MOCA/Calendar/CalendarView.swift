@@ -11,6 +11,8 @@ struct CalendarView: View {
     
     @State private var selectedDate = Date()
     
+    @Binding var showPostMocaView: Bool
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -32,7 +34,9 @@ struct CalendarView: View {
                     
                     HStack {
                         Spacer()
-                        NavigationLink(destination: PostMocaView()) {
+                        Button(action: {
+                            showPostMocaView.toggle()
+                        }) {
                             Image(systemName: "plus")
                                 .foregroundColor(.white)
                                 .padding()
@@ -47,9 +51,12 @@ struct CalendarView: View {
                 .padding()
             }
         }
+        .fullScreenCover(isPresented: $showPostMocaView) {
+            PostMocaView()
+        }
     }
 }
 
 #Preview {
-    CalendarView()
+    CalendarView(showPostMocaView: .constant(false))
 }

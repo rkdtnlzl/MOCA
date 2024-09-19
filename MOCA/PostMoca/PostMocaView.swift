@@ -10,6 +10,8 @@ import RealmSwift
 
 struct PostMocaView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var selectedDate = Date()
     @State private var images: [UIImage] = []
     @State private var showImagePicker: Bool = false
@@ -27,6 +29,20 @@ struct PostMocaView: View {
         ZStack {
             Color(hex: 0xFAF4F2).ignoresSafeArea()
             VStack(alignment: .leading) {
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "xmark")
+                            .padding(.trailing, 10)
+                            .foregroundColor(.black)
+                            .bold()
+                            .frame(width: 30, height: 30)
+                    }
+                }
+                .padding(.bottom)
                 
                 Text("날짜 선택")
                     .font(.pretendardSemiBold18)
@@ -100,16 +116,23 @@ struct PostMocaView: View {
                     FindCafeView(showModal: $showModal, text: $cafeName, showText: $showCafeName)
                 }
                 
-                Text("할 일")
+                Text("카페 공부 내역")
                     .font(.pretendardSemiBold18)
                     .padding(.leading, 10)
                     .padding(.top, 25)
                 
+                TextField("공부 내용 입력", text: $todoText)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 40)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                    .padding(.horizontal, 10)
+                    .onSubmit {
+                        addItem()
+                    }
+                
                 List {
-                    TextField("할 일 입력", text: $todoText)
-                        .onSubmit {
-                            addItem()
-                        }
                     ForEach(todo, id: \.id) { item in
                         ExtractedView(todo: item)
                             .swipeActions(edge: .trailing) {
@@ -122,9 +145,25 @@ struct PostMocaView: View {
                     }
                 }
                 .listStyle(PlainListStyle())
+                .padding(.horizontal, 10)
                 
                 Spacer()
                 
+                Button(action: {
+                    
+                }) {
+                    Text("작성 완료")
+                        .font(.pretendardSemiBold18)
+                        .foregroundColor(.black)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .foregroundColor(.black)
+                .padding(.horizontal, 20)
+                .background(
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(Color(hex: 0xFFAA8F))
+                )
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .fullScreenCover(isPresented: $showImagePicker, content: {
@@ -152,12 +191,6 @@ struct ExtractedView: View {
     
     var body: some View {
         HStack {
-            Button(action: {
-                $todo.complete.wrappedValue.toggle()
-            }, label: {
-                let name = todo.complete ? "checkmark.square.fill" : "checkmark.square"
-                Image(systemName: name)
-            })
             Text(todo.title)
         }
     }
