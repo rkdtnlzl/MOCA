@@ -14,18 +14,20 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView {
-            CalendarView()
-                .tabItem {
-                    Image(systemName: "calendar")
-                }
-            MapView()
-                .tabItem {
-                    Image(systemName: "map")
-                }
+        NavigationView {
+            TabView {
+                CalendarView()
+                    .tabItem {
+                        Image(systemName: "calendar")
+                    }
+                MapView()
+                    .tabItem {
+                        Image(systemName: "map")
+                    }
+            }
         }
-        
     }
+    
 }
 
 #Preview {
