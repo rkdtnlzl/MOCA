@@ -9,20 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var showPostMocaView = false
+    
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().backgroundColor = UIColor(red: 246/255,
+                                                        green: 193/255,
+                                                        blue: 141/255,
+                                                        alpha: 1)
+
+        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
     }
     
     var body: some View {
         NavigationView {
             TabView {
-                CalendarView()
+                CalendarView(showPostMocaView: $showPostMocaView)
                     .tabItem {
                         Image(systemName: "calendar")
+                        Text("Calendar")
                     }
                 MapView()
                     .tabItem {
                         Image(systemName: "map")
+                    }
+                MyPageView()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle")
                     }
             }
         }
