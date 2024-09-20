@@ -34,6 +34,8 @@
 		018A14D12C9AE3130075FDB5 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14D02C9AE3130075FDB5 /* Cafe.swift */; };
 		018A14DA2C9AF5580075FDB5 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14D92C9AF5580075FDB5 /* Todo.swift */; };
 		018A14DF2C9AF62E0075FDB5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 018A14DE2C9AF62E0075FDB5 /* RealmSwift */; };
+		018A14E22C9C5F930075FDB5 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14E12C9C5F930075FDB5 /* MyPageView.swift */; };
+		018A14E92C9C6F220075FDB5 /* Moca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14E82C9C6F220075FDB5 /* Moca.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		018A14D02C9AE3130075FDB5 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		018A14D92C9AF5580075FDB5 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		018A14E12C9C5F930075FDB5 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		018A14E82C9C6F220075FDB5 /* Moca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moca.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 				018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */,
 				010A09F22C97F40C00B4AF6C /* MOCAApp.swift */,
 				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
+				018A14E72C9C6F160075FDB5 /* Realm */,
 				018A14CF2C9AE3090075FDB5 /* Model */,
 				018A149D2C9AC9BC0075FDB5 /* Resource */,
 				018A148B2C97FC5C0075FDB5 /* Extension */,
 				018A148A2C97F9B00075FDB5 /* Calendar */,
 				018A14972C9814FF0075FDB5 /* PostMoca */,
 				018A14942C980E000075FDB5 /* Map */,
+				018A14E02C9C5F7F0075FDB5 /* MyPage */,
 				010A09F62C97F40E00B4AF6C /* Assets.xcassets */,
 				010A09F82C97F40E00B4AF6C /* Preview Content */,
 			);
@@ -188,9 +194,25 @@
 			isa = PBXGroup;
 			children = (
 				018A14D02C9AE3130075FDB5 /* Cafe.swift */,
-				018A14D92C9AF5580075FDB5 /* Todo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		018A14E02C9C5F7F0075FDB5 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				018A14E12C9C5F930075FDB5 /* MyPageView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		018A14E72C9C6F160075FDB5 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				018A14D92C9AF5580075FDB5 /* Todo.swift */,
+				018A14E82C9C6F220075FDB5 /* Moca.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +303,10 @@
 			files = (
 				018A14962C980E0B0075FDB5 /* MapView.swift in Sources */,
 				018A14932C9806EA0075FDB5 /* DateView.swift in Sources */,
+				018A14E22C9C5F930075FDB5 /* MyPageView.swift in Sources */,
 				018A14912C9806B70075FDB5 /* HeaderView.swift in Sources */,
 				018A149C2C981EED0075FDB5 /* ImagePicker.swift in Sources */,
+				018A14E92C9C6F220075FDB5 /* Moca.swift in Sources */,
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
 				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
 				018A14C42C9ACAD80075FDB5 /* Font+.swift in Sources */,
