@@ -78,7 +78,10 @@ struct PostMocaView: View {
     func saveMocaToRealm() {
         let imageDataList = images.compactMap { $0.pngData() }
         
-        let newMoca = Moca(createAt: selectedDate, images: imageDataList, cafeLocation: cafeName, todos: tempTodos)
+        let newMoca = Moca(createAt: selectedDate, 
+                           images: imageDataList,
+                           cafeLocation: cafeName,
+                           todos: tempTodos)
         
         try! realm.write {
             realm.add(newMoca)

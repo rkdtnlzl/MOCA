@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct DateView: View {
     
     var selectedDate: Date
+    var mocaData: [Moca]
+    
+    @State private var showModal = false
+    @State private var selectedMoca: Moca?
     
     var body: some View {
         let days = generateDaysForMonth(for: selectedDate)
@@ -24,10 +29,16 @@ struct DateView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .frame(height: 20)
                         
-                        if isSpecialDate(date: date) {
+                        if isMocaDate(date: date) {
                             Image("coffeeIcon")
                                 .resizable()
                                 .frame(width: 30, height: 40)
+                                .onTapGesture {
+                                    if let moca = getMocaForDate(date: date) {
+                                        selectedMoca = moca
+                                        showModal = true
+                                    }
+                                }
                         } else {
                             Spacer()
                                 .frame(height: 40)
@@ -40,6 +51,11 @@ struct DateView: View {
                     Spacer()
                         .frame(height: 0)
                 }
+            }
+        }
+        .sheet(isPresented: $showModal) {
+            if let moca = selectedMoca {
+                MocaDetailView(moca: moca)
             }
         }
     }
@@ -65,20 +81,23 @@ struct DateView: View {
         return days
     }
     
-    func isSpecialDate(date: Date) -> Bool {
+    func isMocaDate(date: Date) -> Bool {
         let calendar = Calendar.current
-        
-        // 더미 데이터 추가
-        let specialDates = [
-            calendar.date(from: DateComponents(year: 2024, month: 9, day: 10))!,
-            calendar.date(from: DateComponents(year: 2024, month: 9, day: 8))!
-        ]
-        
-        return specialDates.contains { calendar.isDate(date, inSameDayAs: $0) }
+        return mocaData.contains { moca in
+            calendar.isDate(moca.createAt, 
+                            inSameDayAs: date)
+        }
+    }
+    
+    func getMocaForDate(date: Date) -> Moca? {
+        let calendar = Calendar.current
+        return mocaData.first { moca in
+            calendar.isDate(moca.createAt, 
+                            inSameDayAs: date)
+        }
     }
 }
 
 #Preview {
-    DateView(selectedDate: Date())
+    DateView(selectedDate: Date(), mocaData: [])
 }
-

@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct CalendarView: View {
     
     @State private var selectedDate = Date()
+    @State private var mocaData: [Moca] = []
     
     @Binding var showPostMocaView: Bool
     
@@ -28,7 +30,8 @@ struct CalendarView: View {
                     }
                     .frame(height: 30)
                     
-                    DateView(selectedDate: selectedDate)
+                    DateView(selectedDate: selectedDate,
+                             mocaData: mocaData)
                     
                     Spacer()
                     
@@ -51,9 +54,21 @@ struct CalendarView: View {
                 .padding()
             }
         }
-        .fullScreenCover(isPresented: $showPostMocaView) {
+        .fullScreenCover(isPresented: $showPostMocaView, onDismiss: {
+            loadMocaData()
+        }) {
             PostMocaView()
         }
+        .onAppear {
+            loadMocaData()
+            print(Realm.Configuration.defaultConfiguration.fileURL)
+        }
+    }
+    
+    func loadMocaData() {
+        let realm = try! Realm()
+        let results = realm.objects(Moca.self)
+        mocaData = Array(results)
     }
 }
 
