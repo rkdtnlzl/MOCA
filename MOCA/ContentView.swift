@@ -27,7 +27,6 @@ struct ContentView: View {
                 CalendarView(showPostMocaView: $showPostMocaView)
                     .tabItem {
                         Image(systemName: "calendar")
-                        Text("Calendar")
                     }
                 MapView()
                     .tabItem {
@@ -40,7 +39,6 @@ struct ContentView: View {
             }
         }
     }
-    
 }
 
 #Preview {
