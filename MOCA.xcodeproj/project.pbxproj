@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0103B2222C9FF08C0031314F /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2212C9FF08C0031314F /* RealmMigration.swift */; };
+		0103B2242C9FF5450031314F /* MocaRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2232C9FF5450031314F /* MocaRealmManager.swift */; };
 		010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F22C97F40C00B4AF6C /* MOCAApp.swift */; };
 		010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F42C97F40C00B4AF6C /* ContentView.swift */; };
 		010A09F72C97F40E00B4AF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010A09F62C97F40E00B4AF6C /* Assets.xcassets */; };
@@ -36,9 +38,34 @@
 		018A14DF2C9AF62E0075FDB5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 018A14DE2C9AF62E0075FDB5 /* RealmSwift */; };
 		018A14E22C9C5F930075FDB5 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14E12C9C5F930075FDB5 /* MyPageView.swift */; };
 		018A14E92C9C6F220075FDB5 /* Moca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14E82C9C6F220075FDB5 /* Moca.swift */; };
+		018A14ED2C9D52AB0075FDB5 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14EC2C9D52AB0075FDB5 /* TodoListView.swift */; };
+		018A14EF2C9D541F0075FDB5 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14EE2C9D541F0075FDB5 /* DismissButton.swift */; };
+		018A14F12C9D54DC0075FDB5 /* DateSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14F02C9D54DC0075FDB5 /* DateSection.swift */; };
+		018A14F32C9D553B0075FDB5 /* ImagePickerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14F22C9D553B0075FDB5 /* ImagePickerSection.swift */; };
+		018A14F52C9D56030075FDB5 /* FindCafeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14F42C9D56030075FDB5 /* FindCafeSection.swift */; };
+		018A14F72C9D56700075FDB5 /* TodoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14F62C9D56700075FDB5 /* TodoSection.swift */; };
+		018A14F92C9D56FE0075FDB5 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14F82C9D56FE0075FDB5 /* SaveButton.swift */; };
+		018A14FA2C9D60040075FDB5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 018A14DE2C9AF62E0075FDB5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		018A14FD2C9D6A3A0075FDB5 /* MocaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A14FC2C9D6A3A0075FDB5 /* MocaDetailView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		018A14FB2C9D60040075FDB5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				018A14FA2C9D60040075FDB5 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0103B2212C9FF08C0031314F /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
+		0103B2232C9FF5450031314F /* MocaRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocaRealmManager.swift; sourceTree = "<group>"; };
 		010A09EF2C97F40C00B4AF6C /* MOCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010A09F22C97F40C00B4AF6C /* MOCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAApp.swift; sourceTree = "<group>"; };
 		010A09F42C97F40C00B4AF6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +96,14 @@
 		018A14D92C9AF5580075FDB5 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		018A14E12C9C5F930075FDB5 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		018A14E82C9C6F220075FDB5 /* Moca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moca.swift; sourceTree = "<group>"; };
+		018A14EC2C9D52AB0075FDB5 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		018A14EE2C9D541F0075FDB5 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
+		018A14F02C9D54DC0075FDB5 /* DateSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSection.swift; sourceTree = "<group>"; };
+		018A14F22C9D553B0075FDB5 /* ImagePickerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerSection.swift; sourceTree = "<group>"; };
+		018A14F42C9D56030075FDB5 /* FindCafeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCafeSection.swift; sourceTree = "<group>"; };
+		018A14F62C9D56700075FDB5 /* TodoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSection.swift; sourceTree = "<group>"; };
+		018A14F82C9D56FE0075FDB5 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		018A14FC2C9D6A3A0075FDB5 /* MocaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocaDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +170,7 @@
 				018A14882C97F7D20075FDB5 /* CalendarView.swift */,
 				018A14902C9806B70075FDB5 /* HeaderView.swift */,
 				018A14922C9806EA0075FDB5 /* DateView.swift */,
+				018A14FC2C9D6A3A0075FDB5 /* MocaDetailView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -162,6 +198,13 @@
 				018A14982C98152A0075FDB5 /* PostMocaView.swift */,
 				018A149B2C981EED0075FDB5 /* ImagePicker.swift */,
 				018A14C72C9AE13A0075FDB5 /* FindCafeView.swift */,
+				018A14EC2C9D52AB0075FDB5 /* TodoListView.swift */,
+				018A14EE2C9D541F0075FDB5 /* DismissButton.swift */,
+				018A14F02C9D54DC0075FDB5 /* DateSection.swift */,
+				018A14F22C9D553B0075FDB5 /* ImagePickerSection.swift */,
+				018A14F42C9D56030075FDB5 /* FindCafeSection.swift */,
+				018A14F62C9D56700075FDB5 /* TodoSection.swift */,
+				018A14F82C9D56FE0075FDB5 /* SaveButton.swift */,
 			);
 			path = PostMoca;
 			sourceTree = "<group>";
@@ -211,6 +254,8 @@
 			children = (
 				018A14D92C9AF5580075FDB5 /* Todo.swift */,
 				018A14E82C9C6F220075FDB5 /* Moca.swift */,
+				0103B2212C9FF08C0031314F /* RealmMigration.swift */,
+				0103B2232C9FF5450031314F /* MocaRealmManager.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -225,6 +270,7 @@
 				010A09EB2C97F40C00B4AF6C /* Sources */,
 				010A09EC2C97F40C00B4AF6C /* Frameworks */,
 				010A09ED2C97F40C00B4AF6C /* Resources */,
+				018A14FB2C9D60040075FDB5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,15 +352,25 @@
 				018A14E22C9C5F930075FDB5 /* MyPageView.swift in Sources */,
 				018A14912C9806B70075FDB5 /* HeaderView.swift in Sources */,
 				018A149C2C981EED0075FDB5 /* ImagePicker.swift in Sources */,
+				018A14FD2C9D6A3A0075FDB5 /* MocaDetailView.swift in Sources */,
+				018A14F72C9D56700075FDB5 /* TodoSection.swift in Sources */,
 				018A14E92C9C6F220075FDB5 /* Moca.swift in Sources */,
+				018A14EF2C9D541F0075FDB5 /* DismissButton.swift in Sources */,
+				0103B2242C9FF5450031314F /* MocaRealmManager.swift in Sources */,
+				018A14F52C9D56030075FDB5 /* FindCafeSection.swift in Sources */,
+				0103B2222C9FF08C0031314F /* RealmMigration.swift in Sources */,
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
+				018A14ED2C9D52AB0075FDB5 /* TodoListView.swift in Sources */,
+				018A14F92C9D56FE0075FDB5 /* SaveButton.swift in Sources */,
 				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
 				018A14C42C9ACAD80075FDB5 /* Font+.swift in Sources */,
 				018A14DA2C9AF5580075FDB5 /* Todo.swift in Sources */,
+				018A14F12C9D54DC0075FDB5 /* DateSection.swift in Sources */,
 				010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */,
 				018A14992C98152A0075FDB5 /* PostMocaView.swift in Sources */,
 				018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */,
 				018A14CC2C9AE2DC0075FDB5 /* APIKey.swift in Sources */,
+				018A14F32C9D553B0075FDB5 /* ImagePickerSection.swift in Sources */,
 				018A14C82C9AE13A0075FDB5 /* FindCafeView.swift in Sources */,
 				018A14D12C9AE3130075FDB5 /* Cafe.swift in Sources */,
 			);
