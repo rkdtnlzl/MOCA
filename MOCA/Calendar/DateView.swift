@@ -34,10 +34,7 @@ struct DateView: View {
                                 .resizable()
                                 .frame(width: 30, height: 40)
                                 .onTapGesture {
-                                    if let moca = getMocaForDate(date: date) {
-                                        selectedMoca = moca
-                                        showModal = true
-                                    }
+                                    fetchDetailMoca(date: date)
                                 }
                         } else {
                             Spacer()
@@ -53,7 +50,11 @@ struct DateView: View {
                 }
             }
         }
-        .sheet(isPresented: $showModal) {
+        .sheet(isPresented: Binding(get: {
+            selectedMoca != nil
+        }, set: { newValue in
+            if !newValue { selectedMoca = nil }
+        })) {
             if let moca = selectedMoca {
                 MocaDetailView(moca: moca)
             }
@@ -84,17 +85,28 @@ struct DateView: View {
     func isMocaDate(date: Date) -> Bool {
         let calendar = Calendar.current
         return mocaData.contains { moca in
-            calendar.isDate(moca.createAt, 
-                            inSameDayAs: date)
+            calendar.isDate(moca.createAt, inSameDayAs: date)
         }
     }
     
+    func fetchDetailMoca(date: Date) {
+        if let moca = getMocaForDate(date: date) {
+            selectedMoca = moca
+            print("Selected Moca: \(moca.cafeLocation)")
+            showModal = true
+        } else {
+            print("No Moca found for this date")
+        }
+    }
+
     func getMocaForDate(date: Date) -> Moca? {
         let calendar = Calendar.current
-        return mocaData.first { moca in
-            calendar.isDate(moca.createAt, 
-                            inSameDayAs: date)
+        let mocaForDate = mocaData.first { moca in
+            let isSameDate = calendar.isDate(moca.createAt, inSameDayAs: date)
+            print("Checking Moca for date \(date): \(isSameDate ? "Found" : "Not Found")")
+            return isSameDate
         }
+        return mocaForDate
     }
 }
 
