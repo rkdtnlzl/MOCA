@@ -11,7 +11,7 @@ import RealmSwift
 struct CalendarView: View {
     
     @State private var selectedDate = Date()
-    @State private var mocaData: [Moca] = []
+    @StateObject private var realmManager = MocaRealmManager()
     
     @Binding var showPostMocaView: Bool
     
@@ -31,7 +31,7 @@ struct CalendarView: View {
                     .frame(height: 30)
                     
                     DateView(selectedDate: selectedDate,
-                             mocaData: mocaData)
+                             mocaData: realmManager.mocaData)
                     
                     Spacer()
                     
@@ -55,20 +55,14 @@ struct CalendarView: View {
             }
         }
         .fullScreenCover(isPresented: $showPostMocaView, onDismiss: {
-            loadMocaData()
+            realmManager.loadMocaData()
         }) {
             PostMocaView()
         }
         .onAppear {
-            loadMocaData()
+            realmManager.loadMocaData()
             print(Realm.Configuration.defaultConfiguration.fileURL)
         }
-    }
-    
-    func loadMocaData() {
-        let realm = try! Realm()
-        let results = realm.objects(Moca.self)
-        mocaData = Array(results)
     }
 }
 
