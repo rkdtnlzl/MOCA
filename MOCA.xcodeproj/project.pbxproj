@@ -118,6 +118,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0103B2302CA14E560031314F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				010A09F22C97F40C00B4AF6C /* MOCAApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0103B2312CA14E720031314F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0103B2302CA14E560031314F /* App */,
+				018A148B2C97FC5C0075FDB5 /* Extension */,
+				018A14E72C9C6F160075FDB5 /* Realm */,
+				018A14CF2C9AE3090075FDB5 /* Model */,
+				0103B2322CA14E9A0031314F /* Presentation */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0103B2322CA14E9A0031314F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
+				018A148A2C97F9B00075FDB5 /* Calendar */,
+				018A14972C9814FF0075FDB5 /* PostMoca */,
+				018A14942C980E000075FDB5 /* Map */,
+				018A14E02C9C5F7F0075FDB5 /* MyPage */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		010A09E62C97F40C00B4AF6C = {
 			isa = PBXGroup;
 			children = (
@@ -140,16 +172,8 @@
 			children = (
 				018A149A2C981C5D0075FDB5 /* Info.plist */,
 				018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */,
-				010A09F22C97F40C00B4AF6C /* MOCAApp.swift */,
-				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
-				018A14E72C9C6F160075FDB5 /* Realm */,
-				018A14CF2C9AE3090075FDB5 /* Model */,
 				018A149D2C9AC9BC0075FDB5 /* Resource */,
-				018A148B2C97FC5C0075FDB5 /* Extension */,
-				018A148A2C97F9B00075FDB5 /* Calendar */,
-				018A14972C9814FF0075FDB5 /* PostMoca */,
-				018A14942C980E000075FDB5 /* Map */,
-				018A14E02C9C5F7F0075FDB5 /* MyPage */,
+				0103B2312CA14E720031314F /* Source */,
 				010A09F62C97F40E00B4AF6C /* Assets.xcassets */,
 				010A09F82C97F40E00B4AF6C /* Preview Content */,
 			);

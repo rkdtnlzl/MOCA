@@ -61,7 +61,7 @@ struct CalendarView: View {
         }
         .onAppear {
             realmManager.loadMocaData()
-            print(Realm.Configuration.defaultConfiguration.fileURL)
+            print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
         }
     }
 }
