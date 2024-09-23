@@ -18,12 +18,16 @@ extension Font {
     // SemiBold
     static let pretendardSemiBold18: Font = .custom("Pretendard-SemiBold", size: 18)
     static let pretendardSemiBold17: Font = .custom("Pretendard-SemiBold", size: 17)
+    static let pretendardSemiBold16: Font = .custom("Pretendard-SemiBold", size: 16)
+    static let pretendardSemiBold15: Font = .custom("Pretendard-SemiBold", size: 15)
     
     // Medium
     static let pretendardMedium18: Font = .custom("Pretendard-Medium", size: 18)
     static let pretendardMedium16: Font = .custom("Pretendard-Medium", size: 16)
+    static let pretendardMedium14: Font = .custom("Pretendard-Medium", size: 14)
     
     // Regular
+    static let pretendardRegular13: Font = .custom("Pretendard-Regular", size: 13)
     static let pretendardRegular14: Font = .custom("Pretendard-Regular", size: 14)
     static let pretendardRegular16: Font = .custom("Pretendard-Regular", size: 16)
     
