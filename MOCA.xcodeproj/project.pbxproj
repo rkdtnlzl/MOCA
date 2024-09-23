@@ -174,8 +174,6 @@
 				018A14CB2C9AE2DC0075FDB5 /* APIKey.swift */,
 				018A149D2C9AC9BC0075FDB5 /* Resource */,
 				0103B2312CA14E720031314F /* Source */,
-				010A09F62C97F40E00B4AF6C /* Assets.xcassets */,
-				010A09F82C97F40E00B4AF6C /* Preview Content */,
 			);
 			path = MOCA;
 			sourceTree = "<group>";
@@ -236,7 +234,9 @@
 		018A149D2C9AC9BC0075FDB5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				010A09F62C97F40E00B4AF6C /* Assets.xcassets */,
 				018A149E2C9AC9CB0075FDB5 /* Pretendard */,
+				010A09F82C97F40E00B4AF6C /* Preview Content */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MOCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MOCA/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = 7S6PH8TVFD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -565,7 +565,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MOCA/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MOCA/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = 7S6PH8TVFD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
