@@ -15,14 +15,13 @@ struct PostMocaView: View {
     @State private var selectedDate = Date()
     @State private var images: [UIImage] = []
     @State private var showImagePicker: Bool = false
-    
     @State private var showCafeName: Bool = false
     @State private var cafeName = ""
     @State private var showModal = false
-    
     @State private var todoText = ""
-    
     @State private var tempTodos: [Todo] = []
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     
     var realm = try! Realm()
     
@@ -35,14 +34,14 @@ struct PostMocaView: View {
                 
                 DateSection(selectedDate: $selectedDate)
                 
-                ImagePickerSection(images: $images, 
+                ImagePickerSection(images: $images,
                                    showImagePicker: $showImagePicker)
                 
                 FindCafeSection(showCafeName: $showCafeName,
                                 cafeName: $cafeName,
                                 showModal: $showModal)
                 
-                TodoSection(todoText: $todoText, 
+                TodoSection(todoText: $todoText,
                             tempTodos: $tempTodos,
                             addItem: addItem,
                             deleteItem: deleteItem)
@@ -50,7 +49,7 @@ struct PostMocaView: View {
                 Spacer()
                 
                 SaveButton {
-                    saveMocaToRealm()
+                    validateAndSave()
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -58,13 +57,41 @@ struct PostMocaView: View {
                 ImagePicker(selectedImages: $images)
             })
             .padding()
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("입력 오류"),
+                      message: Text(alertMessage),
+                      dismissButton: .default(Text("확인")))
+            }
         }
+    }
+    
+    func validateAndSave() {
+        
+        if images.isEmpty {
+            alertMessage = "이미지를 넣어주세요"
+            showAlert = true
+            return
+        }
+        
+        if cafeName.isEmpty {
+            alertMessage = "카페 위치를 작성해주세요"
+            showAlert = true
+            return
+        }
+        
+        if tempTodos.isEmpty {
+            alertMessage = "할 일을 한 가지 이상 추가해주세요"
+            showAlert = true
+            return
+        }
+        
+        saveMocaToRealm()
     }
     
     func addItem() {
         guard !todoText.isEmpty else { return }
         
-        let newTodo = Todo(title: todoText, 
+        let newTodo = Todo(title: todoText,
                            complete: false)
         
         tempTodos.append(newTodo)
@@ -78,7 +105,7 @@ struct PostMocaView: View {
     func saveMocaToRealm() {
         let imageDataList = images.compactMap { $0.pngData() }
         
-        let newMoca = Moca(createAt: selectedDate, 
+        let newMoca = Moca(createAt: selectedDate,
                            images: imageDataList,
                            cafeLocation: cafeName,
                            todos: tempTodos)
@@ -90,7 +117,6 @@ struct PostMocaView: View {
         dismiss()
     }
 }
-
 
 #Preview {
     PostMocaView()

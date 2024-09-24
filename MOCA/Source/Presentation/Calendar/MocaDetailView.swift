@@ -6,66 +6,82 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct MocaDetailView: View {
-    var moca: Moca?
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var isLoading = true
+    @State private var images: [Data?] = []
+    @State private var todos: [Todo] = []
+    @State private var createAt: Date = Date()
+    @State private var cafeLocation: String = ""
     
+    var moca: Moca
+
+    @StateObject private var realmManager = MocaRealmManager()
+
     var body: some View {
         ZStack {
             Color(hex: 0xFAF4F2).ignoresSafeArea()
-            
-            if let moca = moca, !isLoading {
+
+            if !isLoading {
                 VStack(alignment: .leading) {
-                    TabView {
-                        ForEach(moca.images, id: \.self) { imageData in
-                            if let imageData = imageData, let uiImage = UIImage(data: imageData) {
-                                Image(uiImage: uiImage)
-                                    .resizable()
-                            } else {
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 200)
-                                    .foregroundColor(.gray)
-                            }
+                    
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            deleteMoca()
+                        }) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                                .padding()
                         }
                     }
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 200)
                     
+                    if !images.isEmpty {
+                        TabView {
+                            ForEach(images, id: \.self) { imageData in
+                                if let imageData = imageData, let uiImage = UIImage(data: imageData) {
+                                    Image(uiImage: uiImage)
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                            }
+                        }
+                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                    }
+
                     Text("카공 날짜")
                         .font(.pretendardSemiBold15)
                         .padding(.leading, 20)
                         .padding(.top, 15)
-                    
-                    Text("\(moca.createAt, formatter: dateFormatter)")
+
+                    Text("\(createAt, formatter: dateFormatter)")
                         .font(.pretendardMedium14)
                         .padding(.top, 1)
                         .padding(.leading, 20)
-                    
+
                     Text("카페 위치")
                         .font(.pretendardSemiBold15)
                         .padding(.leading, 20)
                         .padding(.top, 20)
-                    
-                    Text("\(moca.cafeLocation)")
+
+                    Text("\(cafeLocation)")
                         .font(.pretendardMedium14)
                         .padding(.top, 1)
                         .padding(.leading, 20)
-                    
-                    if !moca.todos.isEmpty {
+
+                    if !todos.isEmpty {
                         Text("카공 내역")
                             .font(.pretendardSemiBold15)
                             .padding(.leading, 20)
                             .padding(.top, 15)
                         
-                        ScrollView {  // 스크롤 가능하게 변경
+                        ScrollView {
                             VStack(spacing: 10) {
-                                ForEach(moca.todos, id: \.id) { todo in
+                                ForEach(todos, id: \.id) { todo in
                                     HStack {
                                         Text(todo.title)
                                             .font(.pretendardMedium14)
@@ -85,7 +101,6 @@ struct MocaDetailView: View {
                         }
                         .frame(maxHeight: .infinity)
                     }
-                    
                     Spacer()
                 }
             } else {
@@ -97,21 +112,38 @@ struct MocaDetailView: View {
             }
         }
         .onAppear {
-            if moca != nil {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    isLoading = false
-                }
+            images = Array(moca.images)
+            todos = Array(moca.todos)
+            createAt = moca.createAt
+            cafeLocation = moca.cafeLocation
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                isLoading = false
             }
         }
     }
-    
+
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "yyyy년 M월 d일"
         return formatter
     }
+
+    func deleteMoca() {
+        presentationMode.wrappedValue.dismiss()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(moca)
+            }
+
+            NotificationCenter.default.post(name: NSNotification.Name("MocaDataUpdated"), object: nil)
+        }
+    }
 }
+
 
 #Preview {
     let sampleTodos = [

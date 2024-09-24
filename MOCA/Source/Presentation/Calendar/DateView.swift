@@ -11,9 +11,8 @@ import RealmSwift
 struct DateView: View {
     
     var selectedDate: Date
-    var mocaData: [Moca]
+    @Binding var mocaData: [Moca]
     
-    @State private var showModal = false
     @State private var selectedMoca: Moca?
     
     var body: some View {
@@ -50,14 +49,8 @@ struct DateView: View {
                 }
             }
         }
-        .sheet(isPresented: Binding(get: {
-            selectedMoca != nil
-        }, set: { newValue in
-            if !newValue { selectedMoca = nil }
-        })) {
-            if let moca = selectedMoca {
-                MocaDetailView(moca: moca)
-            }
+        .sheet(item: $selectedMoca) { moca in
+            MocaDetailView(moca: moca)
         }
     }
     
@@ -92,8 +85,6 @@ struct DateView: View {
     func fetchDetailMoca(date: Date) {
         if let moca = getMocaForDate(date: date) {
             selectedMoca = moca
-            print("Selected Moca: \(moca.cafeLocation)")
-            showModal = true
         } else {
             print("No Moca found for this date")
         }
@@ -101,15 +92,13 @@ struct DateView: View {
 
     func getMocaForDate(date: Date) -> Moca? {
         let calendar = Calendar.current
-        let mocaForDate = mocaData.first { moca in
-            let isSameDate = calendar.isDate(moca.createAt, inSameDayAs: date)
-            print("Checking Moca for date \(date): \(isSameDate ? "Found" : "Not Found")")
-            return isSameDate
+        return mocaData.first { moca in
+            calendar.isDate(moca.createAt, inSameDayAs: date)
         }
-        return mocaForDate
     }
 }
 
+
 #Preview {
-    DateView(selectedDate: Date(), mocaData: [])
+    DateView(selectedDate: Date(), mocaData: .constant([]))
 }

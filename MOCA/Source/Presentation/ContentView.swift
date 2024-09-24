@@ -27,14 +27,17 @@ struct ContentView: View {
                 CalendarView(showPostMocaView: $showPostMocaView)
                     .tabItem {
                         Image(systemName: "calendar")
+                        Text("카공달력")
                     }
                 MapView()
                     .tabItem {
                         Image(systemName: "map")
+                        Text("카페지도")
                     }
                 MyPageView()
                     .tabItem {
                         Image(systemName: "person.crop.circle")
+                        Text("마이페이지")
                     }
             }
         }

@@ -21,4 +21,12 @@ class MocaRealmManager: ObservableObject {
         mocaData = Array(results)
         print("Loaded Moca data: \(mocaData)")
     }
+    
+    func deleteMoca(_ moca: Moca) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(moca)
+        }
+        loadMocaData()
+    }
 }

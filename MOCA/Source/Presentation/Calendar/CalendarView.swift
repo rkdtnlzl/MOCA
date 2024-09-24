@@ -9,19 +9,19 @@ import SwiftUI
 import RealmSwift
 
 struct CalendarView: View {
-    
+
     @State private var selectedDate = Date()
     @StateObject private var realmManager = MocaRealmManager()
-    
+
     @Binding var showPostMocaView: Bool
-    
+
     var body: some View {
         NavigationView {
             ZStack {
                 Color(hex: 0xFAF4F2).ignoresSafeArea()
                 VStack(spacing: 0) {
                     HeaderView(selectedDate: $selectedDate)
-                    
+
                     HStack {
                         ForEach(Calendar.current.shortWeekdaySymbols, id: \.self) { symbol in
                             Text(symbol)
@@ -29,12 +29,15 @@ struct CalendarView: View {
                         }
                     }
                     .frame(height: 30)
-                    
-                    DateView(selectedDate: selectedDate,
-                             mocaData: realmManager.mocaData)
-                    
+
+                    DateView(selectedDate: selectedDate, mocaData: $realmManager.mocaData)
+
                     Spacer()
-                    
+                }
+                .padding()
+
+                VStack() {
+                    Spacer()
                     HStack {
                         Spacer()
                         Button(action: {
@@ -47,11 +50,10 @@ struct CalendarView: View {
                                 .clipShape(Circle())
                                 .shadow(radius: 2)
                         }
-                        .padding(.bottom)
-                        .padding(.trailing)
+                        .padding(.bottom, 40)
+                        .padding(.trailing, 30)
                     }
                 }
-                .padding()
             }
         }
         .fullScreenCover(isPresented: $showPostMocaView, onDismiss: {
@@ -61,10 +63,18 @@ struct CalendarView: View {
         }
         .onAppear {
             realmManager.loadMocaData()
-            print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
+
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("MocaDataUpdated"), object: nil, queue: .main) { _ in
+                realmManager.loadMocaData()
+            }
+        }
+        .onDisappear {
+            NotificationCenter.default.removeObserver(self, name: NSNotification.Name("MocaDataUpdated"), object: nil)
         }
     }
 }
+
+
 
 #Preview {
     CalendarView(showPostMocaView: .constant(false))
