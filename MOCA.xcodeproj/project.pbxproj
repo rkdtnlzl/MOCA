@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0103B2222C9FF08C0031314F /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2212C9FF08C0031314F /* RealmMigration.swift */; };
 		0103B2242C9FF5450031314F /* MocaRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2232C9FF5450031314F /* MocaRealmManager.swift */; };
+		0103B2462CA29C610031314F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2452CA29C610031314F /* MapViewController.swift */; };
+		0103B2492CA29E550031314F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0103B2482CA29E550031314F /* SnapKit */; };
 		010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F22C97F40C00B4AF6C /* MOCAApp.swift */; };
 		010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F42C97F40C00B4AF6C /* ContentView.swift */; };
 		010A09F72C97F40E00B4AF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010A09F62C97F40E00B4AF6C /* Assets.xcassets */; };
@@ -66,6 +68,7 @@
 /* Begin PBXFileReference section */
 		0103B2212C9FF08C0031314F /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		0103B2232C9FF5450031314F /* MocaRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocaRealmManager.swift; sourceTree = "<group>"; };
+		0103B2452CA29C610031314F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		010A09EF2C97F40C00B4AF6C /* MOCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010A09F22C97F40C00B4AF6C /* MOCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAApp.swift; sourceTree = "<group>"; };
 		010A09F42C97F40C00B4AF6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018A14DF2C9AF62E0075FDB5 /* RealmSwift in Frameworks */,
+				0103B2492CA29E550031314F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				018A14952C980E0B0075FDB5 /* MapView.swift */,
+				0103B2452CA29C610031314F /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			name = MOCA;
 			packageProductDependencies = (
 				018A14DE2C9AF62E0075FDB5 /* RealmSwift */,
+				0103B2482CA29E550031314F /* SnapKit */,
 			);
 			productName = MOCA;
 			productReference = 010A09EF2C97F40C00B4AF6C /* MOCA.app */;
@@ -334,6 +340,7 @@
 			mainGroup = 010A09E62C97F40C00B4AF6C;
 			packageReferences = (
 				018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				0103B2472CA29E550031314F /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 010A09F02C97F40C00B4AF6C /* Products */;
 			projectDirPath = "";
@@ -393,6 +400,7 @@
 				010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */,
 				018A14992C98152A0075FDB5 /* PostMocaView.swift in Sources */,
 				018A14892C97F7D20075FDB5 /* CalendarView.swift in Sources */,
+				0103B2462CA29C610031314F /* MapViewController.swift in Sources */,
 				018A14CC2C9AE2DC0075FDB5 /* APIKey.swift in Sources */,
 				018A14F32C9D553B0075FDB5 /* ImagePickerSection.swift in Sources */,
 				018A14C82C9AE13A0075FDB5 /* FindCafeView.swift in Sources */,
@@ -534,6 +542,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MOCA/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치를 기반으로 주변 카페 정보를 제공하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치를 기반으로 주변 카페 정보를 제공하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +580,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MOCA/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 위치를 기반으로 주변 카페 정보를 제공하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치를 기반으로 주변 카페 정보를 제공하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -618,6 +630,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0103B2472CA29E550031314F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -629,6 +649,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0103B2482CA29E550031314F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0103B2472CA29E550031314F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		018A14DE2C9AF62E0075FDB5 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 018A14DD2C9AF62E0075FDB5 /* XCRemoteSwiftPackageReference "realm-swift" */;

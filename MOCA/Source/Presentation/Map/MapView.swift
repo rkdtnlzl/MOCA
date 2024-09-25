@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    var body: some View {
-        Text("카페 지도")
+struct MapView: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> MapViewController {
+        return MapViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+        
     }
 }
 
