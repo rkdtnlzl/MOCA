@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
     
     @State private var showPostMocaView = false
+    @State private var selectedTab = 0
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(red: 246/255,
@@ -23,22 +25,27 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            TabView {
+            TabView(selection: $selectedTab) {
                 CalendarView(showPostMocaView: $showPostMocaView)
                     .tabItem {
                         Image(systemName: "calendar")
                         Text("카공달력")
                     }
+                    .tag(0)
+                
                 MapView()
                     .tabItem {
                         Image(systemName: "map")
                         Text("카페지도")
                     }
-                MyPageView()
+                    .tag(1)
+                
+                MyPageView(selectedTab: $selectedTab)
                     .tabItem {
                         Image(systemName: "person.crop.circle")
                         Text("마이페이지")
                     }
+                    .tag(2)
             }
         }
     }
