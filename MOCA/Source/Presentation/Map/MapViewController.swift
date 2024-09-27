@@ -13,8 +13,8 @@ import CoreLocation
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     var mapView = MKMapView()
     var locationManager = CLLocationManager()
-    var searchButton = UIButton()
-    var locationButton = UIButton()
+    var searchCafeButton = UIButton()
+    var myLocationButton = UIButton()
     var hasCenteredOnUserLocation = false
     let kakaoApiKey = APIKey.kakaoKey
     
@@ -49,39 +49,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func setupLocationButton() {
-        locationButton.setImage(UIImage(systemName: "location"), for: .normal)
-        locationButton.tintColor = .white
-        locationButton.backgroundColor = .systemBlue
-        locationButton.layer.cornerRadius = 25
-        locationButton.translatesAutoresizingMaskIntoConstraints = false
+        myLocationButton.setImage(UIImage(systemName: "location"), for: .normal)
+        myLocationButton.tintColor = .white
+        myLocationButton.backgroundColor = .systemBlue
+        myLocationButton.layer.cornerRadius = 25
+        myLocationButton.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(locationButton)
+        view.addSubview(myLocationButton)
         
-        locationButton.snp.makeConstraints { make in
+        myLocationButton.snp.makeConstraints { make in
             make.bottom.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.size.equalTo(50)
         }
         
-        locationButton.addTarget(self, action: #selector(centerToUserLocation), for: .touchUpInside)
+        myLocationButton.addTarget(self, action: #selector(centerToUserLocation), for: .touchUpInside)
     }
     
     private func setupSearchButton() {
-        searchButton.setTitle("현재 위치에서 카페 검색", for: .normal)
-        searchButton.backgroundColor = .white
-        searchButton.layer.cornerRadius = 10
-        searchButton.setTitleColor(.darkGray, for: .normal)
-        searchButton.titleLabel?.font = .systemFont(ofSize: 14)
-        searchButton.translatesAutoresizingMaskIntoConstraints = false
+        searchCafeButton.setTitle("현재 위치에서 카페 검색", for: .normal)
+        searchCafeButton.backgroundColor = UIColor(red: 250/255,
+                                               green: 244/255,
+                                               blue: 242/255,
+                                               alpha: 1)
+        searchCafeButton.layer.cornerRadius = 20
+        searchCafeButton.setTitleColor(.darkGray, for: .normal)
+        searchCafeButton.titleLabel?.font = .systemFont(ofSize: 14)
+        searchCafeButton.translatesAutoresizingMaskIntoConstraints = false
+        searchCafeButton.layer.shadowColor = UIColor.black.cgColor
+        searchCafeButton.layer.shadowOpacity = 0.25
+        searchCafeButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        searchCafeButton.layer.shadowRadius = 4
         
-        view.addSubview(searchButton)
+        view.addSubview(searchCafeButton)
         
-        searchButton.snp.makeConstraints { make in
+        searchCafeButton.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(10)
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(80)
             make.height.equalTo(40)
         }
         
-        searchButton.addTarget(self, action: #selector(searchCafes), for: .touchUpInside)
+        searchCafeButton.addTarget(self, action: #selector(searchCafes), for: .touchUpInside)
     }
     
     @objc private func searchCafes() {
