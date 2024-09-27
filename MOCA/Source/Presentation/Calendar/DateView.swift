@@ -29,9 +29,9 @@ struct DateView: View {
                             .frame(height: 20)
                         
                         if isMocaDate(date: date) {
-                            Image("coffeeIcon")
+                            Image("logo")
                                 .resizable()
-                                .frame(width: 30, height: 40)
+                                .frame(width: 27, height: 35)
                                 .onTapGesture {
                                     fetchDetailMoca(date: date)
                                 }
