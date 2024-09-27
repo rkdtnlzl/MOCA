@@ -11,6 +11,7 @@
 		0103B2242C9FF5450031314F /* MocaRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2232C9FF5450031314F /* MocaRealmManager.swift */; };
 		0103B2462CA29C610031314F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B2452CA29C610031314F /* MapViewController.swift */; };
 		0103B2492CA29E550031314F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0103B2482CA29E550031314F /* SnapKit */; };
+		0103B24B2CA693010031314F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B24A2CA693010031314F /* SplashView.swift */; };
 		010A09F32C97F40C00B4AF6C /* MOCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F22C97F40C00B4AF6C /* MOCAApp.swift */; };
 		010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010A09F42C97F40C00B4AF6C /* ContentView.swift */; };
 		010A09F72C97F40E00B4AF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010A09F62C97F40E00B4AF6C /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		0103B2212C9FF08C0031314F /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		0103B2232C9FF5450031314F /* MocaRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocaRealmManager.swift; sourceTree = "<group>"; };
 		0103B2452CA29C610031314F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0103B24A2CA693010031314F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		010A09EF2C97F40C00B4AF6C /* MOCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MOCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010A09F22C97F40C00B4AF6C /* MOCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCAApp.swift; sourceTree = "<group>"; };
 		010A09F42C97F40C00B4AF6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				010A09F42C97F40C00B4AF6C /* ContentView.swift */,
+				0103B24A2CA693010031314F /* SplashView.swift */,
 				018A148A2C97F9B00075FDB5 /* Calendar */,
 				018A14972C9814FF0075FDB5 /* PostMoca */,
 				018A14942C980E000075FDB5 /* Map */,
@@ -391,6 +394,7 @@
 				018A14F52C9D56030075FDB5 /* FindCafeSection.swift in Sources */,
 				0103B2222C9FF08C0031314F /* RealmMigration.swift in Sources */,
 				010A09F52C97F40C00B4AF6C /* ContentView.swift in Sources */,
+				0103B24B2CA693010031314F /* SplashView.swift in Sources */,
 				018A14ED2C9D52AB0075FDB5 /* TodoListView.swift in Sources */,
 				018A14F92C9D56FE0075FDB5 /* SaveButton.swift in Sources */,
 				018A148D2C97FC690075FDB5 /* Color+.swift in Sources */,
