@@ -28,6 +28,7 @@ struct TodoSection: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
                 .padding(.horizontal, 10)
+                .submitLabel(.done)
                 .onSubmit {
                     addItem()
                 }

@@ -126,7 +126,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to get user location: \(error.localizedDescription)")
+        print("\(error.localizedDescription)")
     }
     
     private func fetchCafes(lat: Double, lon: Double, radius: Double) {
@@ -161,7 +161,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     }
                 }
             } catch {
-                print("Error parsing cafe data: \(error.localizedDescription)")
+                print("\(error.localizedDescription)")
             }
         }
         task.resume()

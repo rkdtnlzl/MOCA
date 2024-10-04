@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 
 struct PostMocaView: View {
+    @FocusState private var isInputActive: Bool
     
     @Environment(\.dismiss) var dismiss
     
@@ -28,6 +29,9 @@ struct PostMocaView: View {
     var body: some View {
         ZStack {
             Color(hex: 0xFAF4F2).ignoresSafeArea()
+                .onTapGesture {
+                    isInputActive = false
+                }
             VStack(alignment: .leading) {
                 
                 DismissButton(dismiss: dismiss)
@@ -45,6 +49,7 @@ struct PostMocaView: View {
                             tempTodos: $tempTodos,
                             addItem: addItem,
                             deleteItem: deleteItem)
+                .focused($isInputActive)
                 
                 Spacer()
                 
@@ -103,15 +108,21 @@ struct PostMocaView: View {
     }
     
     func saveMocaToRealm() {
-        let imageDataList = images.compactMap { $0.pngData() }
+        let imageDataList = images.compactMap { $0.jpegData(compressionQuality: 0.7) }
         
         let newMoca = Moca(createAt: selectedDate,
                            images: imageDataList,
                            cafeLocation: cafeName,
                            todos: tempTodos)
         
-        try! realm.write {
-            realm.add(newMoca)
+        do {
+            try realm.write {
+                realm.add(newMoca)
+            }
+        } catch {
+            print("Realm write error: \(error.localizedDescription)")
+            alertMessage = "데이터를 저장하는 도중 오류가 발생했습니다."
+            showAlert = true
         }
         
         dismiss()
