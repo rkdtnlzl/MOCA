@@ -20,7 +20,7 @@ struct MyPageView: View {
                     Text("버전")
                         .font(.pretendardMedium16)
                     Spacer()
-                    Text("1.0.0")
+                    Text("1.0.1")
                         .font(.pretendardMedium16)
                         .foregroundColor(.gray)
                 }
