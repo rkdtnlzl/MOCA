@@ -2,7 +2,7 @@
 **카공한 기록**을 남기고 싶은 사람들을 위한, <br>
 내 **주변 카페 위치**를 알고 싶은 사람 위한 서비스 입니다
 
-## 🤔 About
+## 🙂 About
 <img src="https://github.com/user-attachments/assets/aaaef69c-5a8a-4732-a2f3-df2fea8a9db0" alt="moca_preview1" width="270" height="550">
 <img src="https://github.com/user-attachments/assets/ceca10e2-6344-4d9d-98a6-814b2e1abc30" alt="moca_preview2" width="270" height="550">
 <img src="https://github.com/user-attachments/assets/d45f1a42-f645-43e3-805a-ba79b58eb01e" alt="moca_preview3" width="270" height="550">
