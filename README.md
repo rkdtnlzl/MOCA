@@ -9,7 +9,7 @@
 <br>
 <br>
 
-## 🛠️ Tech
+## 🛠️ 기술 스택
 - **SwiftUI**: 유저 인터페이스를 선언형 방식으로 구현, 더 적은 코드로 복잡한 UI를 효율적으로 구성
 - **Realm**: 빠르고 경량화된 로컬 데이터베이스로, 카페 기록과 공부 기록을 로컬에 저장하고 관리
 - **MapKit**: 사용자의 위치를 기반으로 주변 카페를 표시하고, 카페 위치를 지도로 제공
@@ -18,12 +18,12 @@
 - **CoreLocation**: 사용자의 위치 정보를 정확하게 받아오고, 지도에 반영
 <br>
 
-## 🚀 AppStore
+## 🚀 앱스토어
 [MOCA](https://apps.apple.com/app/moca-%EC%B9%B4%EA%B3%B5%EC%A1%B1%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%B9%B4%ED%8E%98-%EA%B3%B5%EB%B6%80-%EA%B8%B0%EB%A1%9D-%EC%95%B1/id6723889266)
 <br>
 
 
-## Project Info
+## 💁 프로젝트 정보
 - 기간 : 2024.09.16 ~ 2024.09.27
 - 개발 인원 : 1명
 - 지원 버전: iOS 16.0 +
@@ -42,10 +42,40 @@
   - `주변 카페 조회`
     - 사용자 위치 기반 카페 조회 기능
     - 카메라 시점에 따른 카페 조회 기능
+<br>
+
+## 🤔 고민했던 점
+### MapKit 구현 시 iOS 버전 차이에 따른 개발 전략
+- **고민한 점**
+```
+if #available(iOS 17.0, *) {
+  Map {
+       ...             
+  }
+} else {
+    // Fallback on earlier versions
+}
+```
+SwiftUI로 MapKit을 구현할 때 iOS 17 이상과 이전 버전에서 각각 다른 방식으로 지도를 구현해야 함. 분기 처리를 통해 iOS 17 이상과 이하 버전을 나눠서 구현할 수 있지만, 이렇게 되면 두 가지 구현 방식을 모두 유지해야 하므로 코드가 중복되고 복잡해질 수 있음. 또한, SwiftUI와 UIKit의 상호작용이나 데이터 상태 관리를 일관되게 처리하는 데 어려움이 있음. 구체적인 예로, iOS 17에서는 상태 바인딩을 통해 간단히 구현할 수 있는 기능을 iOS 16 이하에서는 델리게이트 메서드를 작성하고, 관련 프로토콜을 채택해야 하는 차이점이 발생함.
+
+- **결론**
+```
+struct MapView: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> MapViewController {
+        return MapViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+        
+    }
+}
+```
+따라서 iOS 17 이상에서도 SwiftUI의 Map 뷰를 사용하지 않고, 일관되게 UIViewControllerRepresentable을 사용해 UIKit의 MKMapView를 SwiftUI에 통합하는 방법을 선택함.
 
 <br>
 
-## Trouble Shooting
+## 😥 트러블 슈팅
 ### Realm 데이터 갱신 이슈
 **문제 상황**<br>
 MocaDetailView에서 사용자가 삭제 작업을 진행할 때 Realm 데이터가 제대로 반영되지 않는 문제가 발생했음.<br>
